@@ -184,9 +184,11 @@ notion-inbox/
 ├── requirements.txt
 ├── app/
 │   ├── __init__.py
-│   ├── main.py           # FastAPI application
-│   ├── notion_client.py  # Notion API helpers
-│   ├── models.py         # Pydantic models
+│   ├── main.py           # FastAPI application & route definitions
+│   ├── service.py        # Business logic (shared by API + CLI)
+│   ├── notion_client.py  # Notion API client & Markdown-to-blocks converter
+│   ├── models.py         # Pydantic models & enums
+│   ├── exceptions.py     # Typed error hierarchy for Notion operations
 │   └── settings.py       # Environment configuration
 ├── cli/
 │   └── notionw.py        # CLI tool
